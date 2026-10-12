@@ -1,0 +1,3 @@
+# Gün 64 — Qeyd
+
+Bu gün OpenAI və Anthropic API-lərini streaming rejimində işlətməyi öyrəndim və tokenlər gəldikcə ekrana çıxan CLI chatbot yazdım. Retry/backoff məntiqini quraraq başa düşdüm ki, yalnız müvəqqəti xətalar (429, 5xx) təkrar edilməlidir, 400 və 401 kimi xətalar isə dərhal dayandırılmalıdır. Axın yarıda kəsilərsə yenidən cəhd etmək mətni təkrarlayacağı üçün retry yalnız ilk parçadan əvvəl işləyir. Hər cavabdan sonra API-nin qaytardığı real token sayından xərci hesablayan sadə kalkulyator əlavə etdim. Commitdən əvvəl kodu 5 dəqiqə sonra təzə gözlə oxuyub bir şeyi yaxşılaşdırmaq (refactor) da bu günün vacib hissəsi oldu.
